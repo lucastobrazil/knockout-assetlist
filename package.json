@@ -1,0 +1,23 @@
+{
+  "name": "knockout-filelist",
+  "version": "1.0.0",
+  "description": "Basic asset list and sidebar",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucastobrazil/knockout-filelist.git"
+  },
+  "author": "Lucas Arundell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lucastobrazil/knockout-filelist/issues"
+  },
+  "homepage": "https://github.com/lucastobrazil/knockout-filelist",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "less": "^2.5.1"
+  }
+}

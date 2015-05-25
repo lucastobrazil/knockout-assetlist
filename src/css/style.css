@@ -1,0 +1,1 @@
+body{background:#fafafa}.row:not(.header){border-bottom:1px solid lightgray;padding:5px 0}.row:not(.header):hover{background:#116b86;color:white}.row:not(.header) span:not(.thumb){padding:11px 0}.row:not(.header).footer{text-align:center}.thumbnail{width:80px}
