@@ -1,13 +1,16 @@
-var ViewModel = function () {
+var ViewModel = function (data) {
     var self = this;
     self.files = ko.observableArray([ ]);
 	self.sideBarVisible = ko.observable(false);
     self.selectedRow = ko.observable();
     
-    $.getJSON( "data/data.json", function(data) {
-        self.files(data.files);
-        self.selectedRow(self.files()[0]);
-    });
+    // $.getJSON( "data/data.json", function(data) {
+    //     self.files(data.files);
+    //     self.selectedRow(self.files()[0]);
+    // });
+
+    self.files(data.files);
+    self.selectedRow(self.files()[0]);
 
     // Delete the item from the array
     self.removeFile = function() {
@@ -35,6 +38,8 @@ var ViewModel = function () {
 };
 
 $(document).ready(function() {
-    var vm = new ViewModel();
-	ko.applyBindings(vm); // This makes Knockout get to work
+    $.getJSON( "data/data.json", function(data) {
+        var vm = new ViewModel(data);
+    	ko.applyBindings(vm); // This makes Knockout get to work
+    });
 });
