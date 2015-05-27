@@ -1,0 +1,40 @@
+{
+    "files":[
+        {
+            "filename" : "IMG_7153.JPG",
+            "size"  : "232.0kb",
+            "description" : "Tower in Vientiane",
+            "rating" : "5"
+        },{
+            "filename" : "IMG_7155.JPG",
+            "size"  : "52.4kb",
+            "description" : "View from the top - Phnom Penh",
+            "rating" : "2"
+        },{
+            "filename" : "IMG_7170.JPG",
+            "size"  : "64.2kb",
+            "description" : "Record Collection",
+            "rating" : "1"
+        },{
+            "filename" : "IMG_7211.JPG",
+            "size"  : "232.0kb",
+            "description" : "Wax candle burning",
+            "rating" : "3"
+        },{
+            "filename" : "IMG_7243.JPG",
+            "size"  : "162.7kb",
+            "description" : "Disco Ball hanging from roof",
+            "rating" : "1"
+        },{
+            "filename" : "IMG_7270.JPG",
+            "size"  : "232.0kb",
+            "description" : "Happy mandarin fruit sitting on table",
+            "rating" : "4"
+        },{
+            "filename" : "IMG_7293.JPG",
+            "size"  : "299.3kb",
+            "description" : "Haito the Ewok dog!",
+            "rating" : "1"
+        }
+    ]
+}

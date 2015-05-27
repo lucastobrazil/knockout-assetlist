@@ -1,0 +1,52 @@
+/*knockout-assetlist.less */
+
+body{
+	background: #FAFAFA;
+	font-size: 12px;
+}
+
+.panel-heading{border-bottom: 0;}
+
+.panel-body{
+	padding: 0;
+	position: relative;
+}
+.row:not(.header){
+	border-bottom: 1px solid lightgray;
+	padding: 5px 0;
+	
+	&:hover{
+		background: #116b86;
+		color: white;
+		cursor: pointer;
+	}
+	
+	span:not(.thumb){
+		padding-top: 5px;
+	}
+
+	&.footer{
+		text-align:center;
+	}
+}
+
+
+.header{
+	margin-bottom: 5px;
+	color: rgb(171, 171, 171);
+	text-transform: uppercase;
+	padding: 5px 0;
+	span{text-align: left;}
+}
+
+.thumbnail{
+	width: 80px;
+}
+
+.sidebar{
+	position: absolute;
+	right: 0;
+	height: 100%;
+	background: #f2f2f2;
+	border-left: 1px solid lightgray;
+}
