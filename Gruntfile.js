@@ -9,7 +9,7 @@ module.exports = function(grunt) {
           optimization: 2
         },
         files: {
-          "src/css/style.css": "src/less/knockout-filelist.less" // destination file and source file
+          "src/css/style.css": "src/less/knockout-assetlist.less" // destination file and source file
         }
       }
     },

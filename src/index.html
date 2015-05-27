@@ -1,17 +1,21 @@
 <html>
     <head>
+        <title>Knockout-Assetlist - by lucastobrazil</title>
         <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
         <script type="text/javascript" src="js/knockout-3.3.0.js"></script>
         <script type="text/javascript" src="app.js"></script>
 
         <link rel="stylesheet" href="css/bootstrap.min.css" />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
     
     <body>
         <div class="container">
-            <h1>Knockout Assetlist</h1>
-            <p>Simple app that reads a <code>JSON</code> array from an external data file and renders a file list using Knockout.js</p>
+            <h1>Knockout-Assetlist</h1>
+            <p><a href="https://github.com/lucastobrazil/knockout-filelist" target="_blank"><i class="fa fa-github"></i> on Github <i class="fa fa-external-link"></i></a>.</p>
+            <p>Simple app that reads a <code>JSON</code> array from an external data file and renders an asset list using <a href="http://knockoutjs.com/" target="_blank">Knockout.js</a></p>
+            <p>Author: <a href="https://github.com/lucastobrazil" target="_blank">lucastobrazil</a></p>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <h3>Assets</h3>
@@ -30,7 +34,7 @@
                             <span class="col-xs-1"></span>                    
                         </div>
                         <div data-bind="foreach: files">
-                            <div class="row" data-bind="click: $parent.didSelectRow">   
+                            <div class="row" data-bind="click: $parent.selectRow">   
                                 <span class="col-xs-1 thumb">
                                     <img class="img-responsive" data-bind="attr: {src: 'thumbs/' + filename}" />
                                 </span>
@@ -39,7 +43,7 @@
                                 <span class="col-xs-4" data-bind="text: description" ></span>
                                 <span class="col-xs-1" data-bind="text: rating" ></span>
                                 <span class="col-xs-1">
-                                    <button class="btn btn-danger"  data-bind="click: $parent.removeFile">Delete</button>
+                                    <button class="btn btn-danger"  data-bind="click: $parent.removeRow">x</button>
                                 </span>
                             </div>
                         </div>

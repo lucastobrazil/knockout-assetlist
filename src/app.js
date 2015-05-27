@@ -1,19 +1,25 @@
-var ViewModel = function (data) {
+var ViewModel = function (dataObject) {
     var self = this;
-    self.files = ko.observableArray([ ]);
-	self.sideBarVisible = ko.observable(false);
-    self.selectedRow = ko.observable();
+    // Set files object
+    self.files = ko.observableArray(dataObject.files);
+    // Observable for user selection
+    self.selectedRow = ko.observable(self.files()[0]);
+    // Property to handle the sidebar (optional)
+    self.sideBarVisible = ko.observable(false);
     
-    // $.getJSON( "data/data.json", function(data) {
-    //     self.files(data.files);
-    //     self.selectedRow(self.files()[0]);
-    // });
+    // User selected a row
+    self.selectRow = function(){
+        if(self.selectedRow().filename === this.filename){
+            self.sideBarVisible(false);
+            self.selectedRow(false);
+        }else{
+            self.sideBarVisible(true);
+            self.selectedRow(this);
+        }
+    }
 
-    self.files(data.files);
-    self.selectedRow(self.files()[0]);
-
-    // Delete the item from the array
-    self.removeFile = function() {
+    // User deleted a row
+    self.removeRow = function() {
         self.files.remove(this);
         self.selectedRow()[0];
     };
@@ -22,24 +28,12 @@ var ViewModel = function (data) {
     self.toggleSideBar = function(){
         self.sideBarVisible(!self.sideBarVisible());
     };
-
-    // User selected a row
-    self.didSelectRow = function(){
-        if(self.selectedRow().filename === this.filename){
-            self.sideBarVisible(false);
-            self.selectedRow(false);
-        }else{
-            self.sideBarVisible(true);
-            self.selectedRow(this);
-
-        }
-    }
-    
 };
 
+// Page Ready to go, so grab JSON data and let's do it!
 $(document).ready(function() {
     $.getJSON( "data/data.json", function(data) {
         var vm = new ViewModel(data);
-    	ko.applyBindings(vm); // This makes Knockout get to work
+    	ko.applyBindings(vm);
     });
 });
